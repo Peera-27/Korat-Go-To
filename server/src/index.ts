@@ -3,19 +3,23 @@ import { examplecontroll } from "./controllers/example.controller"
 import { swaggerConfig } from "./config/swagger.config"
 import { tlsConfig } from "./config/tls.config"
 import cors from "@elysiajs/cors"
-import { Database } from "./config/database.config"
+import { database } from "./config/database.config"
 import { jwtconfig } from "./config/jwt.config"
+import { locationcontroller } from "./controllers/location.controller"
 
-Database.connect()
+database.connect()
 
 const app = new Elysia()
   .use(examplecontroll)
+  .use(locationcontroller)
   .use(swaggerConfig)
   .use(jwtconfig)
   .use(cors())
-  .get("/", () => "Hello Korat Go-To")
+
+
+
   .listen({
-    port: Bun.env.PORT || 3000,
+    port: Bun.env.PORT || 8000,
     tls: tlsConfig
   })
 let protocol = 'http'

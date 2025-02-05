@@ -10,8 +10,11 @@
     "@elysiajs/jwt": "^1.2.0",
     "@elysiajs/static": "^1.2.0",
     "@elysiajs/swagger": "^1.2.0",
+    "axios": "^1.7.9",
     "elysia": "latest",
-    "mongoose": "^8.9.5"
+    "mongoose": "^8.9.5",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^7.1.5"
   },
   "devDependencies": {
     "bun-types": "latest"

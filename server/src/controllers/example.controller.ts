@@ -1,5 +1,5 @@
 import Elysia, { t } from "elysia"
-
+import mongoose from "mongoose"
 export const examplecontroll = new Elysia()
     .get('/home', () => "Hello Korat Go-To 1", {
         detail: {
