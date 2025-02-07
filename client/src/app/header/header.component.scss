@@ -5,6 +5,11 @@ mat-toolbar button {
     display: flex;
     cursor: pointer;
     background: none;
+    color: black;
+}
+
+mat-toolbar {
+    background-color: rgb(255, 136, 0);
 }
 
 img {
