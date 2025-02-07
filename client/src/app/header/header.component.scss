@@ -7,6 +7,11 @@ mat-toolbar button {
     background: none;
 }
 
+img {
+    width: 50px;
+    height: 50px;
+}
+
 mat-toolbar button.active:not(.home-button) {
     color: aqua;
 }
