@@ -8,6 +8,18 @@ mat-toolbar button {
     color: black;
 }
 
+h1 {
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    font-size: 2em;
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
 mat-toolbar {
     background-color: rgb(255, 136, 0);
 }
@@ -28,4 +40,10 @@ mat-toolbar button.active:not(.home-button) {
 mat-toolbar .home-button {
     font-size: xx-large;
     color: cadetblue;
+}
+
+.photo-button {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
