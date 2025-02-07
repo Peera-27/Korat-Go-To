@@ -24,9 +24,13 @@ mat-toolbar {
     background-color: rgb(255, 136, 0);
 }
 
-img {
-    width: 50px;
-    height: 50px;
+.photo-button {
+    width: 100px;
+    /* หรือขนาดเดียวกับปุ่ม */
+    height: 100px;
+    /* หรือขนาดเดียวกับปุ่ม */
+    object-fit: contain;
+    /* ป้องกันภาพบิดเบี้ยว */
 }
 
 mat-toolbar button.active:not(.home-button) {
