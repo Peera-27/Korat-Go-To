@@ -1,4 +1,4 @@
-<google-map [center]="center" [zoom]="zoom" height="500px" width="100%">
+<google-map [center]="center" [zoom]="zoom" height="715px" width="100%">
 
     <map-marker *ngFor="let marker of markers" [position]="marker.position" [title]="marker.title"
         (mapClick)="openInfoWindow(marker, marker.title)">
