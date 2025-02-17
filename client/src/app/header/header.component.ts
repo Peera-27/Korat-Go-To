@@ -6,16 +6,15 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-
-
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, MatButtonModule, MatIconModule, MatToolbarModule, MatMenuModule, MatFormFieldModule, MatInputModule],
+  imports: [RouterLink, MatButtonModule, MatIconModule, MatToolbarModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSidenavModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
+  showFiller = false;
 }
