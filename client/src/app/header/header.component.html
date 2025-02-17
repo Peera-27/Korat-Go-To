@@ -1,16 +1,39 @@
 <mat-toolbar>
     <button class="home-button" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
-        <img class="photo-button" src="../Screenshot_2024-12-11_223517-removebg-preview.png" alt=""> </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Register</span>
+        </button>
+        <button mat-menu-item routerLink="/login" roiuterLinkActive="active">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
 
-        <span class="my-spacer"></span>
-        <h1>KORATGOTO</h1>
     <span class="my-spacer"></span>
-    <button mat-raised-button  routerLink="/map" routerLinkActive="active">
+    <mat-form-field class="search" appearance="outline">
+        <mat-label>search</mat-label>
+        <input matInput placeholder="Placeholder">
+        <button mat-icon-button matSuffix aria-label="Search">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+    <span class="my-spacer"></span>
+    <button mat-raised-button routerLink="/map" routerLinkActive="active">
         <mat-icon>map</mat-icon>
         <span> Map</span>
     </button>
 
-<button mat-raised-button routerLink="/" routerLinkActive="active">
+    <button mat-raised-button routerLink="/" routerLinkActive="active">
         <mat-icon>home</mat-icon>
         <span> Home</span>
     </button>

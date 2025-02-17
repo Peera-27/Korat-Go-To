@@ -8,4 +8,9 @@ export const routes: Routes = [{
 {
     path: 'map',
     loadComponent: () => import('./map/map.component').then(c => c.MapComponent)
-},]
+},
+{
+    path: 'login',
+    loadComponent: () => import('./login/login.component').then(c => c.LoginComponent)
+},
+]
