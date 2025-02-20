@@ -1,26 +1,17 @@
 import Elysia from "elysia"
-import { Location } from "../model/location.model"
-
-export const locationcontroller = new Elysia()
-    .get('/location', async ({ set }) => {
-        try {
-            const locations = await Location.find()
-            if (!locations.length) {
-                set.status = 404
-                return { message: "No locations found" }
-            }
-            set.status = 200
-            return locations
-        } catch (error) {
-            set.status = 400
-            throw new Error("Something ผิดปกติ  🥵")
-        }
-
+import { LocationDTO } from "../type/location.type"
+import { LocationService } from "../service/location.service"
+export const LocationController = new Elysia({
+    prefix: "/api/location",
+    tags: ["location"]
+})
+    .use(LocationDTO)
+    .get('/:locationname', ({ params: { locationname } }) => {
+        console.log("🛠 API Received:", locationname)
+        return LocationService.getlocation(locationname)
     }, {
-        detail: {
-            tags: ["Location"],
-            summary: "get location",
-            description: "get location form mongoDB"
-        }
-    })
+        detail: { summary: "Get location By Username" },
+        response: "location",
+        isSignIn: true
 
+    })
